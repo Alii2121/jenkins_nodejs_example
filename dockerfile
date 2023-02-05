@@ -1,6 +1,5 @@
 FROM node:12
-USER node
-COPY --chown=node:node nodeapp /nodeapp
-WORKDIR /nodeapp
+USER root
+COPY . .
 RUN npm install
 CMD ["node", "/nodeapp/app.js"]
